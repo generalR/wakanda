@@ -14,15 +14,22 @@ export const HomePageTemplate = ({ data, home, upcomingMeetup = null }) => {
   const presenters = upcomingMeetup && upcomingMeetup.presenters;
   return (
     <>
+      <Nyheter />
       <section className="header">
         <div className="header-container  container">
-          {home.headerImage && <img className="header-image" src={home.headerImage.image} alt={home.headerImage.imageAlt} />}
+          {home.headerImage && (
+            <img
+              className="header-image"
+              src={home.headerImage.image}
+              alt={home.headerImage.imageAlt}
+            />
+          )}
           <h3 className="header-tagline">
             <span className="header-taglinePart">{home.title}</span>
           </h3>
         </div>
       </section>
-      <Nyheter/>
+
       <section className="upcomingMeetup  section">
         <div className="upcomingMeetup-container  container">
           <h2 className="upcomingMeetup-title">{home.upcomingMeetupHeading}</h2>
@@ -39,23 +46,38 @@ export const HomePageTemplate = ({ data, home, upcomingMeetup = null }) => {
               {presenters.length > 0 && (
                 <div className="upcomingMeetup-presenters">
                   {presenters.map(presenter => (
-                    <div className="upcomingMeetup-presenter" key={presenter.text}>
+                    <div
+                      className="upcomingMeetup-presenter"
+                      key={presenter.text}
+                    >
                       <img
                         className="upcomingMeetup-presenterImage"
-                        src={presenter.image ? presenter.image : HeadshotPlaceholder}
-                        alt={presenter.image ? presenter.name : "Default headshot placeholder"}
+                        src={
+                          presenter.image
+                            ? presenter.image
+                            : HeadshotPlaceholder
+                        }
+                        alt={
+                          presenter.image
+                            ? presenter.name
+                            : "Default headshot placeholder"
+                        }
                       />
-                      <span className="upcomingMeetup-presenterName">{presenter.name}</span>
+                      <span className="upcomingMeetup-presenterName">
+                        {presenter.name}
+                      </span>
                       <span className="upcomingMeetup-presenterPresentationTitle">
                         {presenter.presentationTitle}
                       </span>
-                      <p className="upcomingMeetup-presenterDescription">{presenter.text}</p>
+                      <p className="upcomingMeetup-presenterDescription">
+                        {presenter.text}
+                      </p>
                     </div>
                   ))}
                 </div>
               )}
               <p className="upcomingMeetup-mapNote">{home.mapsNote}</p>
-              <Nyheter/>
+              <Nyheter />
             </>
           ) : (
             <p className="upcomingMeetup-detail">{home.noUpcomingMeetupText}</p>
@@ -69,8 +91,12 @@ export const HomePageTemplate = ({ data, home, upcomingMeetup = null }) => {
           className="ctaBlock-pattern  ctaBlock-pattern--first"
         >
           <div className="ctaBlock-cta">
-            <span className="ctaBlock-ctaHeading">{home.callToActions.firstCTA.heading}</span>
-            <p className="ctaBlock-ctaDescription">{home.callToActions.firstCTA.subHeading}</p>
+            <span className="ctaBlock-ctaHeading">
+              {home.callToActions.firstCTA.heading}
+            </span>
+            <p className="ctaBlock-ctaDescription">
+              {home.callToActions.firstCTA.subHeading}
+            </p>
           </div>
         </CustomLink>
         <CustomLink
@@ -79,8 +105,12 @@ export const HomePageTemplate = ({ data, home, upcomingMeetup = null }) => {
           className="ctaBlock-pattern  ctaBlock-pattern--second"
         >
           <div className="ctaBlock-cta">
-            <span className="ctaBlock-ctaHeading">{home.callToActions.secondCTA.heading}</span>
-            <p className="ctaBlock-ctaDescription">{home.callToActions.secondCTA.subHeading}</p>
+            <span className="ctaBlock-ctaHeading">
+              {home.callToActions.secondCTA.heading}
+            </span>
+            <p className="ctaBlock-ctaDescription">
+              {home.callToActions.secondCTA.subHeading}
+            </p>
           </div>
         </CustomLink>
       </section>
@@ -92,11 +122,11 @@ class HomePage extends React.Component {
   render() {
     const { data } = this.props;
     const {
-      data: { footerData, navbarData },
+      data: { footerData, navbarData }
     } = this.props;
     const { frontmatter: home } = data.homePageData.edges[0].node;
     const {
-      seo: { title: seoTitle, description: seoDescription, browserTitle },
+      seo: { title: seoTitle, description: seoDescription, browserTitle }
     } = home;
     let upcomingMeetup = null;
     // Find the next meetup that is closest to today
@@ -125,9 +155,9 @@ class HomePage extends React.Component {
 HomePage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
+      edges: PropTypes.array
+    })
+  })
 };
 
 export default HomePage;
@@ -135,7 +165,9 @@ export default HomePage;
 export const pageQuery = graphql`
   query HomePageQuery {
     allMarkdownRemark(
-      filter: { frontmatter: { presenters: { elemMatch: { text: { ne: null } } } } }
+      filter: {
+        frontmatter: { presenters: { elemMatch: { text: { ne: null } } } }
+      }
       sort: { order: DESC, fields: frontmatter___date }
     ) {
       edges {
@@ -159,9 +191,11 @@ export const pageQuery = graphql`
           }
         }
       }
-    }  
+    }
     ...LayoutFragment
-    homePageData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "home-page" } } }) {
+    homePageData: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "home-page" } } }
+    ) {
       edges {
         node {
           frontmatter {

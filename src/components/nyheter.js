@@ -1,69 +1,88 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import React from "react";
+import { StaticQuery, graphql } from "gatsby";
 
-const Nyheter = ({  }) => (
+const Nyheter = () => (
   <StaticQuery
     query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
+      query {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          filter: { frontmatter: { templateKey: { eq: "gigs-post" } } }
+        ) {
+          edges {
+            node {
+              id
+              frontmatter {
+                title
+                date(formatString: "DD MMMM, YYYY")
+                image
+              }
+              excerpt
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <div>
+        {/**  <h2>{data.allMarkdownRemark.frontmatter.title}</h2>  */}
+
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <div key={node.id}>
+            <h2>
+              {node.frontmatter.title}
+              <span>Nu funkar ju iaf componenten {node.frontmatter.date}</span>
+            </h2>
+            <p>{node.excerpt}</p>
+            <p>{node.frontmatter.mainImage}</p>
+          </div>
+        ))}
+      </div>
+    )}
+  />
+);
+
+export default Nyheter;
+
+/*
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query NewsQuery {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          filter: { frontmatter: { templateKey: { eq: "gigs-post" } } }
+        ) {
+          edges {
+            node {
+              excerpt(pruneLength: 400)
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                templateKey
+                date(formatString: "MMMM DD, YYYY")
+                image
+              }
+            }
           }
         }
       }
     `}
     render={data => (
       
-        <div>{data.site.siteMetadata.title}</div>
-        
+      <h2>{data.allMarkdownRemark.frontmatter.title}</h2>
+
       
-    )}
-  />
+    
+  )}
+/>
 )
 
-export default Nyheter
-
-
-
-
-
-{/** 
-export default () => (
-  <StaticQuery
-    query={graphql`
-      query NewsQuery {
-        allMarkdownRemark(
-            sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "gigs-post" } } }
-          ) {
-            edges {
-              node {
-                excerpt(pruneLength: 400)
-                id
-                fields {
-                  slug
-                }
-                frontmatter {
-                  title
-                  templateKey
-                  date(formatString: "MMMM DD, YYYY")
-                  image           
-                }
-              }
-            }
-        }
-      }
-    `}
-    render={data => (
-
-        <div className="meetup-presenterImage">{data.title} </div>
-     
-    )}
-  />
-)
-
-
-
+{
+  /**
 const Nyheter = class extends React.Component {
   render() {
     const { data } = this.props;
@@ -138,4 +157,31 @@ export const nyhetsQuery = graphql`
     }
   }
 `;
-   */} 
+   
+}
+*/
+
+/*
+const Nyheter = ({  }) => (
+  <StaticQuery
+    query={graphql`
+      query SiteTitleQuery {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `}
+    render={data => (
+      
+        <div>{data.site.siteMetadata.title}</div>
+        
+      
+    )}
+  />
+)
+
+export default Nyheter
+
+*/
