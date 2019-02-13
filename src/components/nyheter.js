@@ -34,7 +34,8 @@ const Nyheter = () => (
               <span>Nu funkar ju iaf componenten {node.frontmatter.date}</span>
             </h2>
             <p>{node.excerpt}</p>
-            <p>{node.frontmatter.mainImage}</p>
+
+            <img className="header-image" src={node.frontmatter.image} />
           </div>
         ))}
       </div>

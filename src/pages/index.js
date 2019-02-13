@@ -11,7 +11,7 @@ import "../styles/home.scss";
 import Nyheter from "../components/nyheter";
 
 export const HomePageTemplate = ({ data, home, upcomingMeetup = null }) => {
-  const presenters = upcomingMeetup && upcomingMeetup.presenters;
+  // const presenters = upcomingMeetup && upcomingMeetup.presenters;
   return (
     <>
       <section className="header">
@@ -28,8 +28,31 @@ export const HomePageTemplate = ({ data, home, upcomingMeetup = null }) => {
           </h3>
         </div>
       </section>
+      <Nyheter />
 
-      <section className="upcomingMeetup  section">
+      <section>
+        <div>
+          <li>
+            <ul>
+              {" "}
+              <span className="ctaBlock-ctaHeading">
+                {home.callToActions.firstCTA.heading}
+              </span>
+            </ul>
+            <ul>
+              <span className="ctaBlock-ctaHeading">
+                {home.callToActions.secondCTA.heading}
+              </span>
+            </ul>
+            <ul>
+              <span className="ctaBlock-ctaHeading">
+                {home.callToActions.thirdCTA.heading}
+              </span>
+            </ul>
+          </li>
+        </div>
+      </section>
+      {/**  <section className="upcomingMeetup  section">
         <div className="upcomingMeetup-container  container">
           <h2 className="upcomingMeetup-title">{home.upcomingMeetupHeading}</h2>
           {upcomingMeetup ? (
@@ -76,13 +99,15 @@ export const HomePageTemplate = ({ data, home, upcomingMeetup = null }) => {
                 </div>
               )}
               <p className="upcomingMeetup-mapNote">{home.mapsNote}</p>
-              <Nyheter />
             </>
           ) : (
             <p className="upcomingMeetup-detail">{home.noUpcomingMeetupText}</p>
           )}
         </div>
       </section>
+       */}
+
+      {/**
       <section className="ctaBlock">
         <CustomLink
           linkType={home.callToActions.firstCTA.linkType}
@@ -113,6 +138,7 @@ export const HomePageTemplate = ({ data, home, upcomingMeetup = null }) => {
           </div>
         </CustomLink>
       </section>
+       */}
     </>
   );
 };
@@ -218,6 +244,9 @@ export const pageQuery = graphql`
                 subHeading
                 linkType
                 linkURL
+              }
+              thirdCTA {
+                heading
               }
             }
             seo {

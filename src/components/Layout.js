@@ -6,8 +6,13 @@ import "../styles";
 import Navigation from "./Nav/Navigation";
 //import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import navi from "../components/navi";
 
-const TemplateWrapper = ({ footerData = null, navbarData = null, children }) => (
+const TemplateWrapper = ({
+  footerData = null,
+  navbarData = null,
+  children
+}) => (
   <div>
     <Helmet>
       <html lang="en" />
@@ -22,7 +27,9 @@ const TemplateWrapper = ({ footerData = null, navbarData = null, children }) => 
 
 export const query = graphql`
   fragment LayoutFragment on Query {
-    footerData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "footer" } } }) {
+    footerData: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "footer" } } }
+    ) {
       edges {
         node {
           id
@@ -42,7 +49,9 @@ export const query = graphql`
         }
       }
     }
-    navbarData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "navbar" } } }) {
+    navbarData: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "navbar" } } }
+    ) {
       edges {
         node {
           id
