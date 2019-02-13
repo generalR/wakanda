@@ -1,23 +1,25 @@
 ---
 templateKey: home-page
 headerImage:
-  image: /img/television.png
+  image: /img/hero_img.jpg
   imageAlt: JavaScript Wakanda
-title: Meet other JavaScript Developers in Wakanda
-upcomingMeetupHeading: Upcoming Meetup
+title: Goda råd inom den personliga assistansen vid byte eller val av bolag.
+upcomingMeetupHeading: Helt kostnadsfritt
 noUpcomingMeetupText: Details to be announced.
 mapsNote: Clicking the pin opens Google Maps in a new tab.
 callToActions:
   firstCTA:
-    heading: Past Meetups
+    heading: Rådgivning
     linkType: internal
     linkURL: /meetups
     subHeading: Look at what topics were presented at past meetups.
   secondCTA:
-    heading: Volunteer to Present
+    heading: Förmedling
     linkType: external
-    linkURL: 'mailto:contact@js-wakanda.org'
+    linkURL: "mailto:contact@js-wakanda.org"
     subHeading: Want to present at an upcoming meetup? Contact us.
+  thirdCTA:
+    heading: Uppföljning
 seo:
   browserTitle: JS Wakanda
   description: >-
@@ -25,4 +27,3 @@ seo:
     for presentations and to meet others in the community.
   title: JavaScript Wakanda
 ---
-

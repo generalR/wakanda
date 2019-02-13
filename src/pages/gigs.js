@@ -3,12 +3,10 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 
-
 export default class GigsPage extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
-
     return (
       <Layout>
         <section className="section">
@@ -23,12 +21,11 @@ export default class GigsPage extends React.Component {
                 style={{ border: "1px solid #333", padding: "2em 4em" }}
                 key={post.id}
               >
-               <img
+                <img
                   className="meetup-presenterImage"
                   src={post.frontmatter.image}
-                
                 />
-                     
+
                 <p>
                   <Link className="has-text-primary" to={post.fields.slug}>
                     {post.frontmatter.title}
@@ -60,7 +57,7 @@ GigsPage.propTypes = {
     })
   })
 };
- 
+
 export const pageQuery = graphql`
   query GigsPageIndexQuery {
     allMarkdownRemark(
@@ -78,11 +75,10 @@ export const pageQuery = graphql`
             title
             templateKey
             date(formatString: "MMMM DD, YYYY")
-            image           
+            image
           }
         }
       }
     }
   }
 `;
-
