@@ -3,16 +3,18 @@ import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 
 import "../styles";
-import { Navbar } from "../components/Navbar";
+import Navigation from "./Nav/Navigation";
+//import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 
 const TemplateWrapper = ({ footerData = null, navbarData = null, children }) => (
   <div>
     <Helmet>
       <html lang="en" />
-      <meta name="keywords" content="montreal, javascript, programming, meetup" />
+      <meta name="keywords" content="personlig assistans, rådgivning, , kostnadsfri" />
     </Helmet>
-    <Navbar data={navbarData} />
+   {/** <Navbar data={navbarData} />  */}
+   <Navigation/>
     <main>{children}</main>
     <Footer data={footerData} />
   </div>

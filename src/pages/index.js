@@ -14,7 +14,6 @@ export const HomePageTemplate = ({ data, home, upcomingMeetup = null }) => {
   const presenters = upcomingMeetup && upcomingMeetup.presenters;
   return (
     <>
-      <Nyheter />
       <section className="header">
         <div className="header-container  container">
           {home.headerImage && (
