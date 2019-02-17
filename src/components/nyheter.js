@@ -6,6 +6,7 @@ const Nyheter = () => (
     query={graphql`
       query {
         allMarkdownRemark(
+          limit:1
           sort: { order: DESC, fields: [frontmatter___date] }
           filter: { frontmatter: { templateKey: { eq: "gigs-post" } } }
         ) {

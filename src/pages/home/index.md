@@ -20,6 +20,11 @@ callToActions:
     subHeading: Want to present at an upcoming meetup? Contact us.
   thirdCTA:
     heading: Uppföljning
+UlfImage:
+  image: /img/ulf.jpg
+  imageAlt: Assistansrådgivare
+UlfCitat: “Att förbättra livskvaliteten för människor med ett stort hjälpbehov är anledningen till att jag startade Carl Felix AssistansAssist”
+NamnTillCitat: Ulf Helinder
 seo:
   browserTitle: JS Wakanda
   description: >-

@@ -6,7 +6,6 @@ import "../styles";
 import Navigation from "./Nav/Navigation";
 //import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-import navi from "../components/navi";
 
 const TemplateWrapper = ({
   footerData = null,

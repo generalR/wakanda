@@ -15,7 +15,7 @@ export const HomePageTemplate = ({ data, home, upcomingMeetup = null }) => {
   return (
     <>
       <section className="header">
-        <div className="header-container  container">
+        <div className="container">
           {home.headerImage && (
             <img
               className="header-image"
@@ -23,28 +23,27 @@ export const HomePageTemplate = ({ data, home, upcomingMeetup = null }) => {
               alt={home.headerImage.imageAlt}
             />
           )}
-          <h3 className="header-tagline">
-            <span className="header-taglinePart">{home.title}</span>
+          <h3 className="">
+            <span className="">{home.title}</span>
           </h3>
         </div>
       </section>
-      <Nyheter />
 
       <section>
-        <div>
-          <li>
-            <ul>
+        <div className="container">
+          <li className="row">
+            <ul className="col-xs">
               {" "}
               <span className="ctaBlock-ctaHeading">
                 {home.callToActions.firstCTA.heading}
               </span>
             </ul>
-            <ul>
+            <ul className="col-xs">
               <span className="ctaBlock-ctaHeading">
                 {home.callToActions.secondCTA.heading}
               </span>
             </ul>
-            <ul>
+            <ul className="col-xs">
               <span className="ctaBlock-ctaHeading">
                 {home.callToActions.thirdCTA.heading}
               </span>
@@ -52,6 +51,29 @@ export const HomePageTemplate = ({ data, home, upcomingMeetup = null }) => {
           </li>
         </div>
       </section>
+
+      <section className="nyheter">
+        <div className="container">
+          <h1>Nyheter</h1>  
+          <Nyheter />
+        </div>
+      </section>
+      
+      <section >
+      <div className="row center-xs">
+        <div col-xs-12>
+          <img className="" src={home.UlfImage.image} alt={home.UlfImage.imageAlt}/>
+        </div>
+        <div col-xs-12>
+          <q className="">{home.UlfCitat}</q>
+        </div>
+        <div col-xs-12>
+          <h2>{home.NamnTillCitat}</h2>
+        </div>
+        </div>
+      </section>
+
+
       {/**  <section className="upcomingMeetup  section">
         <div className="upcomingMeetup-container  container">
           <h2 className="upcomingMeetup-title">{home.upcomingMeetupHeading}</h2>
@@ -249,6 +271,12 @@ export const pageQuery = graphql`
                 heading
               }
             }
+            UlfImage {
+              image
+              imageAlt
+            }
+            UlfCitat
+            NamnTillCitat
             seo {
               browserTitle
               title
