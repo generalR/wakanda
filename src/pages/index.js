@@ -58,18 +58,41 @@ export const HomePageTemplate = ({ data, home, upcomingMeetup = null }) => {
           <Nyheter />
         </div>
       </section>
+
+      <section>
+        <div className="container">
+          <li className="row">
+            <ul className="col-xs">
+              {" "}
+              <span className="ctaBlock-ctaHeading">
+                {home.callToActions.firstCTA.heading}
+              </span>
+            </ul>
+            <ul className="col-xs">
+              <span className="ctaBlock-ctaHeading">
+                {home.callToActions.secondCTA.heading}
+              </span>
+            </ul>
+            <ul className="col-xs">
+              <span className="ctaBlock-ctaHeading">
+                {home.callToActions.thirdCTA.heading}
+              </span>
+            </ul>
+          </li>
+        </div>
+      </section>
       
-      <section >
-      <div className="row center-xs">
-        <div col-xs-12>
-          <img className="" src={home.UlfImage.image} alt={home.UlfImage.imageAlt}/>
-        </div>
-        <div col-xs-12>
-          <q className="">{home.UlfCitat}</q>
-        </div>
-        <div col-xs-12>
-          <h2>{home.NamnTillCitat}</h2>
-        </div>
+      <section className="container" >
+        <div className="row center-xs">
+          <div col-lg-12>
+            <img className="" src={home.UlfImage.image} alt={home.UlfImage.imageAlt}/>
+          </div>
+          <div col-lg-12>
+            <q className="">{home.UlfCitat}</q>
+          </div>
+          <div col-lg-12>
+            <h2>{home.NamnTillCitat}</h2>
+          </div>
         </div>
       </section>
 
