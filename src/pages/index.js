@@ -62,8 +62,9 @@ export const HomePageTemplate = ({ data, home, upcomingMeetup = null }) => {
         </div>
       </section>
 
-      <section>
+      <section className="ulf-citat">
         <div className="container">
+          <hr className="hr-element-top" />
           <li className="row center-xs">
             <ul className="col-xs-12">
               <img
@@ -83,6 +84,7 @@ export const HomePageTemplate = ({ data, home, upcomingMeetup = null }) => {
               </span>
             </ul>
           </li>
+          <hr className="hr-element-bottom" />
         </div>
       </section>
 

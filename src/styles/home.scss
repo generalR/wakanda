@@ -2,6 +2,7 @@
 @import "./mixins.scss";
 
 .header {
+  margin-bottom: 175px;
   //height: 450px;
   //background-color: $background-medium;
 
@@ -71,27 +72,63 @@
     bottom: 100px;
     left: 80px;
     color: #fff;
-    font-size: 48px;
+    line-height: 44px;
+    font-size: 40px;
     font-weight: 700;
-    width: 600px;
+    width: 577px;
   }
 }
 .services {
-  margin-top: 75px;
-}
-.services_circle {
-  width: 50%;
-  height: 0;
-  font-size: 20px;
-  color: #fff;
-  text-align: center;
-  line-height: 0;
-  padding: 25% 0;
-  border-radius: 50%;
-  background: #09f;
-  margin: 0 auto;
-}
+  margin-bottom: 175px;
 
+  .services_circle {
+    width: 40%;
+    height: 0;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 0;
+    padding: 20% 0;
+    border-radius: 50%;
+    background: #f3a83f;
+    margin: 0 auto;
+  }
+}
+.nyheter {
+  margin-bottom: 175px;
+  h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 25px;
+  }
+  .card-content2 {
+    font-size: 13px;
+    opacity: 0.7;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    display: inline-block;
+    letter-spacing: 0.8px;
+  }
+}
+.ulf-citat {
+  margin-bottom: 175px;
+  .hr-element-top {
+    opacity: 0.2;
+    margin-bottom: 75px;
+  }
+  .hr-element-bottom {
+    opacity: 0.2;
+    margin-top: 75px;
+  }
+  span.ctaBlock-ctaHeading {
+    width: 650px;
+    display: block;
+    margin: 0 auto;
+    font-size: 24px;
+    line-height: 2rem;
+    margin-top: 25px;
+  }
+}
 .upcomingMeetup {
   color: $body-dark;
   @include medium-font;

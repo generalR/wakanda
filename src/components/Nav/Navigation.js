@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import "./styles.scss";
+import HeadshotPlaceholder from "../../img/Lager.png";
 
 class Navigation extends React.Component {
   /* componentDidMount() {
@@ -22,7 +23,12 @@ class Navigation extends React.Component {
         <div className="menu_wrapper menu row">
           <div className="col-xs logo_wrapper">
             <Link to="/">
-              <h3 id="logo">CarlFelix Assistansassist</h3>
+              <img
+                className="logo"
+                className="meetup-presenterImage"
+                src={HeadshotPlaceholder}
+                alt={"CarlFelix Assistansassist"}
+              />
             </Link>
           </div>
           <div className="toggle">
@@ -50,8 +56,9 @@ class Navigation extends React.Component {
           </div>
 
           <div className="col-xs">
-            <div className="col-xs-offset-6">
-              <span className="mail_adress">E: roypers89@gmail.com</span> <br />
+            <div className="mail-info col-xs">
+              <span className="mail_adress">E: ulfhelinder@gmail.com</span>{" "}
+              <br />
               <span className="mail_adress">T: +46 735747926</span>
             </div>
           </div>

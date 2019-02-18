@@ -31,17 +31,18 @@ const Nyheter = () => (
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <div className="row center-xs">
-              <div className="col-xs-12 col-md-6 ">
-                <h2>
-                  {node.frontmatter.title}
-                  <span>
-                    Nu funkar ju iaf componenten {node.frontmatter.date}
-                  </span>
-                </h2>
-                <p>{node.excerpt}</p>
+              <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div className="card-content2">
+                  <h2>
+                    {node.frontmatter.title}
+                    <span>
+                      Nu funkar ju iaf componenten {node.frontmatter.date}
+                    </span>
+                  </h2>
+                  <p>{node.excerpt}</p>
+                </div>
               </div>
-
-              <div className="col-xs-12 col-md-6">
+              <div className="first-xs last-sm last-lg col-xs-12 col-sm-8 col-md-8 col-lg-8">
                 <img className="header-image" src={node.frontmatter.image} />
               </div>
             </div>

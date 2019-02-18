@@ -1,7 +1,7 @@
 header {
   &.container {
     padding-top: 40px;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
   }
 }
 
@@ -46,13 +46,12 @@ header {
 
 #main_nav {
   text-align: left;
-  background-color: fff;
-  //padding-left: 200px;
   display: flex;
+  margin-top: 25px;
+
   a {
-    color: black;
-    font-weight: 300;
-    font-size: 16px;
+    color: #000;
+    font-size: 18px;
     text-decoration: none !important;
     margin-left: 40px;
   }
@@ -60,16 +59,19 @@ header {
 .menu_wrapper {
   display: flex;
   justify-content: space-between;
+  font-weight: 600;
 }
 
+.mail-info {
+  margin-top: 25px;
+  font-size: 20px;
+}
 .mail_adress {
-  color: #656565;
-  letter-spacing: 0.9px;
-  font-weight: 300;
-  font-size: 13px;
   text-decoration: none !important;
   margin-left: 20px;
   line-height: 20px;
+  margin-top: 25px;
+  font-size: 24px;
 }
 #main_nav a:first-child {
   margin-left: 0px;
@@ -110,7 +112,6 @@ header {
       .mail-adress-mobile {
         display: block;
         font-size: 18px;
-        font-weight: 300;
         letter-spacing: 0.6px;
       }
       #main_nav {
@@ -118,7 +119,6 @@ header {
         a {
           color: black;
           display: block;
-          font-weight: 300;
           font-size: 16px;
           text-decoration: none !important;
           margin-left: 20px;
