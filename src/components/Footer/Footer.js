@@ -1,6 +1,5 @@
 import React from "react";
 import "./styles.scss";
-import HeadshotPlaceholder from "../../img/logo-big.png";
 
 export const FooterTemplate = ({ data }) => {
   const { logoImage, socialLinks } = data;
@@ -13,10 +12,11 @@ export const FooterTemplate = ({ data }) => {
             <h4 className="footer-aboutTitle">
               <img
                 className="footer-aboutTitleImg"
-                src={HeadshotPlaceholder}
+                src={logoImage.image}
                 alt={logoImage.imageAlt}
               />
             </h4>
+            <p className="footer-aboutDescription">{logoImage.tagline}</p>
           </div>
           {socialLinks.length > 0 && (
             <ul className="footer-socialMenu">
