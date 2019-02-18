@@ -14,7 +14,7 @@ export const PastMeetupsPageTemplate = ({
   title,
   content,
   meetups = null,
-  bodyIsMarkdown = false,
+  bodyIsMarkdown = false
 }) => {
   return (
     <article className="pastMeetups">
@@ -41,15 +41,15 @@ export const PastMeetupsPageTemplate = ({
 PastMeetupsPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
-  meetups: PropTypes.array,
+  meetups: PropTypes.array
 };
 
 const PastMeetupsPage = ({ data }) => {
   const { markdownRemark: page } = data;
   const {
     frontmatter: {
-      seo: { title: seoTitle, description: seoDescription, browserTitle },
-    },
+      seo: { title: seoTitle, description: seoDescription, browserTitle }
+    }
   } = page;
   let meetups = data.allMarkdownRemark.edges;
 
@@ -75,7 +75,7 @@ const PastMeetupsPage = ({ data }) => {
 };
 
 PastMeetupsPage.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired
 };
 
 export default PastMeetupsPage;
@@ -95,7 +95,9 @@ export const pastMeetupsPageQuery = graphql`
     }
     ...LayoutFragment
     allMarkdownRemark(
-      filter: { frontmatter: { presenters: { elemMatch: { text: { ne: null } } } } }
+      filter: {
+        frontmatter: { presenters: { elemMatch: { text: { ne: null } } } }
+      }
       sort: { order: DESC, fields: frontmatter___date }
     ) {
       edges {

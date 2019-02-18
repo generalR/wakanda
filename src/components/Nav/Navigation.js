@@ -1,5 +1,6 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react";
+import { Link } from "gatsby";
+import "./styles.scss";
 
 class Navigation extends React.Component {
   /* componentDidMount() {
@@ -19,50 +20,45 @@ class Navigation extends React.Component {
     return (
       <header className="container" id="header_container_post">
         <div className="menu_wrapper menu row">
-        <div className="col-xs logo_wrapper">
-          <Link to="/">
-            <h3 id="logo">CarlFelix Assistansassist</h3>
-          </Link>
-        </div>
-        <div className="toggle">
-          <div className="btn-line" />
-          <div className="btn-line" />
-          <div className="btn-line" />
-        </div>
+          <div className="col-xs logo_wrapper">
+            <Link to="/">
+              <h3 id="logo">CarlFelix Assistansassist</h3>
+            </Link>
+          </div>
+          <div className="toggle">
+            <div className="btn-line" />
+            <div className="btn-line" />
+            <div className="btn-line" />
+          </div>
 
-        
           <div className="col-xs">
             <nav id="main_nav">
               <div id="" className="mobile-nav">
                 <div className="mobile-nav-container">
-                  <Link className="nav-item" to={'/'}>
+                  <Link className="nav-item" to={"/"}>
                     Hem
                   </Link>
-                  <Link className="nav-item" to={'/lab'}>
+                  <Link className="nav-item" to={"/lab"}>
                     Felix
                   </Link>
-                  <Link className="nav-item" to={'/cv'}>
+                  <Link className="nav-item" to={"/cv"}>
                     Nyheter
                   </Link>
-                  </div>
                 </div>
-              
+              </div>
             </nav>
           </div>
 
           <div className="col-xs">
-            <div className="col-xs-offset-4">
-            <span className="mail_adress">E: roypers89@gmail.com</span> <br />
-            <span className="mail_adress">T: +46 735747926</span>
+            <div className="col-xs-offset-6">
+              <span className="mail_adress">E: roypers89@gmail.com</span> <br />
+              <span className="mail_adress">T: +46 735747926</span>
             </div>
           </div>
-
-        
-
         </div>
       </header>
 
-    /** 
+      /** 
       <header className="container" id="header_container_post">
         <div className="logo_wrapper">
           <Link to="/">
@@ -111,8 +107,8 @@ class Navigation extends React.Component {
         </div>
       </header>
       */
-    )
+    );
   }
 }
 
-export default Navigation
+export default Navigation;

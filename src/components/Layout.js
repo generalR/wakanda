@@ -15,10 +15,13 @@ const TemplateWrapper = ({
   <div>
     <Helmet>
       <html lang="en" />
-      <meta name="keywords" content="personlig assistans, rådgivning, , kostnadsfri" />
+      <meta
+        name="keywords"
+        content="personlig assistans, rådgivning, , kostnadsfri"
+      />
     </Helmet>
-   {/** <Navbar data={navbarData} />  */}
-   <Navigation/>
+    {/** <Navbar data={navbarData} />  */}
+    <Navigation />
     <main>{children}</main>
     <Footer data={footerData} />
   </div>

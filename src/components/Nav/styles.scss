@@ -1,0 +1,232 @@
+header {
+  &.container {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+}
+
+/*.navbar {
+  background-color: $background-dark;
+  height: $navbar-height;
+
+  &-container {
+    display: flex;
+    height: 100%;
+  }
+
+  &-menu {
+    display: flex;
+    flex-grow: 0;
+    margin-left: auto;
+    margin-right: -1rem;
+  }
+
+  &-menuItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &-menuLink {
+    color: $menu-inactive;
+    padding: 0 0.5rem;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    font-weight: 300;
+    letter-spacing: 0.4px;
+    transition: all $transition-duration ease-in-out;
+
+    &:hover,
+    &--active {
+      color: $menu-active;
+    }
+  }
+}
+*/
+
+#main_nav {
+  text-align: left;
+  background-color: fff;
+  //padding-left: 200px;
+  display: flex;
+  a {
+    color: black;
+    font-weight: 300;
+    font-size: 16px;
+    text-decoration: none !important;
+    margin-left: 40px;
+  }
+}
+.menu_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mail_adress {
+  color: #656565;
+  letter-spacing: 0.9px;
+  font-weight: 300;
+  font-size: 13px;
+  text-decoration: none !important;
+  margin-left: 20px;
+  line-height: 20px;
+}
+#main_nav a:first-child {
+  margin-left: 0px;
+}
+
+.mail-adress-mobile {
+  display: none;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (max-width: 600px) {
+    .post article .post_content {
+      text-align: left;
+      margin-right: 0px;
+      position: relative;
+    }
+    .post {
+      .post-card {
+        width: 80%;
+        max-width: 100%;
+        margin: 0px;
+        margin-top: 0;
+      }
+      h2 {
+        font-size: 22px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1400px) {
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (max-width: 768px) {
+      .mail-adress-wrapper {
+        margin-top: 30vh;
+      }
+      .mail-adress-mobile {
+        display: block;
+        font-size: 18px;
+        font-weight: 300;
+        letter-spacing: 0.6px;
+      }
+      #main_nav {
+        display: flex;
+        a {
+          color: black;
+          display: block;
+          font-weight: 300;
+          font-size: 16px;
+          text-decoration: none !important;
+          margin-left: 20px;
+        }
+      }
+      #main_nav {
+        a {
+          font-size: 37px;
+          margin-left: 0p;
+        }
+      }
+
+      #main_nav a {
+        margin-left: 0px;
+      }
+      .mobile-nav {
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+        transition: 0.3s;
+        .mobile-nav-container {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          transition: translate(-50%, -50%);
+          display: block;
+          margin-top: 15vh;
+          .nav-item {
+            margin-top: 0px;
+            padding: 20px;
+            align-items: center;
+            font-size: 50px;
+            //outline: 1px solid black;
+          }
+        }
+      }
+      .active {
+        left: 0;
+        overflow: auto;
+        background-color: #fff;
+      }
+
+      .mail_adress {
+        display: none;
+      }
+      #main_nav {
+        text-align: left;
+        background-color: fff;
+        //padding-left: 5%;
+      }
+
+      .toggle {
+        z-index: 2;
+        position: absolute;
+        left: 5%;
+        top: 5%;
+        cursor: pointer;
+        overflow: hidden;
+
+        .btn-line {
+          width: 28px;
+          height: 3px;
+          margin-top: 5px;
+          background: #000;
+        }
+
+        //Rotate Into X with Menu Lines
+        &.close {
+          .btn-line {
+            //Line 1 Rotate
+            &:nth-child(1) {
+              background: #a3c0be;
+              transform: translate(0px, 8px) rotate(45deg);
+              transition: transform 0.2s ease-in-out;
+            }
+            //Line 2 hide
+            &:nth-child(2) {
+              opacity: 0;
+            }
+            //Line 3 Rotate
+            &:nth-child(3) {
+              background: #a3c0be;
+              transform: translate(0px, -8px) rotate(-45deg);
+              transition: transform 0.2s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (max-width: 992px) {
+      /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+      @media screen and (max-height: 450px) {
+        .overlay a {
+          font-size: 20px;
+        }
+        .overlay .closebtn {
+          font-size: 40px;
+          top: 15px;
+          right: 35px;
+        }
+      }
+    }
+  }
+}

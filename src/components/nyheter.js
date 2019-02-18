@@ -6,7 +6,7 @@ const Nyheter = () => (
     query={graphql`
       query {
         allMarkdownRemark(
-          limit:1
+          limit: 1
           sort: { order: DESC, fields: [frontmatter___date] }
           filter: { frontmatter: { templateKey: { eq: "gigs-post" } } }
         ) {
@@ -25,21 +25,29 @@ const Nyheter = () => (
       }
     `}
     render={data => (
-      <div>
+      <section className="container">
         {/**  <h2>{data.allMarkdownRemark.frontmatter.title}</h2>  */}
 
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
-            <h2>
-              {node.frontmatter.title}
-              <span>Nu funkar ju iaf componenten {node.frontmatter.date}</span>
-            </h2>
-            <p>{node.excerpt}</p>
+            <div className="row center-xs">
+              <div className="col-xs-12 col-md-6 ">
+                <h2>
+                  {node.frontmatter.title}
+                  <span>
+                    Nu funkar ju iaf componenten {node.frontmatter.date}
+                  </span>
+                </h2>
+                <p>{node.excerpt}</p>
+              </div>
 
-            <img className="header-image" src={node.frontmatter.image} />
+              <div className="col-xs-12 col-md-6">
+                <img className="header-image" src={node.frontmatter.image} />
+              </div>
+            </div>
           </div>
         ))}
-      </div>
+      </section>
     )}
   />
 );

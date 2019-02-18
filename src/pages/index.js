@@ -16,37 +16,40 @@ export const HomePageTemplate = ({ data, home, upcomingMeetup = null }) => {
     <>
       <section className="header">
         <div className="container">
-          {home.headerImage && (
-            <img
-              className="header-image"
-              src={home.headerImage.image}
-              alt={home.headerImage.imageAlt}
-            />
-          )}
-          <h3 className="">
-            <span className="">{home.title}</span>
+          <div className="">
+            {home.headerImage && (
+              <img
+                className="header-image"
+                src={home.headerImage.image}
+                alt={home.headerImage.imageAlt}
+              />
+            )}
+          </div>
+          <h3 className="header-title">
+            <span className="header-title__pos-absolute"> {home.title} </span>
           </h3>
         </div>
       </section>
 
-      <section>
+      <section className="services">
         <div className="container">
-          <li className="row">
-            <ul className="col-xs">
+          <li className="row center-xs">
+            <ul className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
               {" "}
-              <span className="ctaBlock-ctaHeading">
+              <div className="services_circle">
                 {home.callToActions.firstCTA.heading}
-              </span>
+                <p>&#x2192;</p>
+              </div>
             </ul>
-            <ul className="col-xs">
-              <span className="ctaBlock-ctaHeading">
+            <ul className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+              <div className="services_circle">
                 {home.callToActions.secondCTA.heading}
-              </span>
+              </div>
             </ul>
-            <ul className="col-xs">
-              <span className="ctaBlock-ctaHeading">
+            <ul className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+              <div className="services_circle">
                 {home.callToActions.thirdCTA.heading}
-              </span>
+              </div>
             </ul>
           </li>
         </div>
@@ -54,48 +57,55 @@ export const HomePageTemplate = ({ data, home, upcomingMeetup = null }) => {
 
       <section className="nyheter">
         <div className="container">
-          <h1>Nyheter</h1>  
+          <h1>Nyheter</h1>
           <Nyheter />
         </div>
       </section>
 
       <section>
         <div className="container">
-          <li className="row">
-            <ul className="col-xs">
-              {" "}
+          <li className="row center-xs">
+            <ul className="col-xs-12">
+              <img
+                className=""
+                src={home.UlfImage.image}
+                alt={home.UlfImage.imageAlt}
+              />
+            </ul>
+            <ul className="col-xs-12">
               <span className="ctaBlock-ctaHeading">
-                {home.callToActions.firstCTA.heading}
+                <q className=""> {home.UlfCitat} </q>
               </span>
             </ul>
-            <ul className="col-xs">
+            <ul className="col-xs-12">
               <span className="ctaBlock-ctaHeading">
-                {home.callToActions.secondCTA.heading}
-              </span>
-            </ul>
-            <ul className="col-xs">
-              <span className="ctaBlock-ctaHeading">
-                {home.callToActions.thirdCTA.heading}
+                <h2> {home.NamnTillCitat} </h2>
               </span>
             </ul>
           </li>
         </div>
       </section>
-      
-      <section className="container" >
+
+      {/**
+      <section className="container">
         <div className="row center-xs">
-          <div col-lg-12>
-            <img className="" src={home.UlfImage.image} alt={home.UlfImage.imageAlt}/>
+          <div col-xs-12 col-sm-12 col-md-12 col-lg-12>
+            <img
+              className=""
+              src={home.UlfImage.image}
+              alt={home.UlfImage.imageAlt}
+            />
           </div>
-          <div col-lg-12>
+          <div col-xs-12 col-sm-12 col-md-12 col-lg-12>
             <q className="">{home.UlfCitat}</q>
           </div>
-          <div col-lg-12>
+          <div col-xs-12 col-sm-12 col-md-12 col-lg-12>
             <h2>{home.NamnTillCitat}</h2>
           </div>
         </div>
       </section>
 
+ */}
 
       {/**  <section className="upcomingMeetup  section">
         <div className="upcomingMeetup-container  container">
@@ -214,7 +224,7 @@ class HomePage extends React.Component {
         <Helmet>
           <meta name="title" content={seoTitle} />
           <meta name="description" content={seoDescription} />
-          <title>{browserTitle}</title>
+          <title> {browserTitle} </title>
         </Helmet>
         <HomePageTemplate home={home} upcomingMeetup={upcomingMeetup} />
       </Layout>
