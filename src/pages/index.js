@@ -6,6 +6,7 @@ import isAfter from "date-fns/is_after";
 
 import Layout from "../components/Layout";
 import HeadshotPlaceholder from "../img/headshot-placeholder.svg";
+import ArrowRight from "../img/arrow-right-solid.svg";
 import CustomLink from "../components/CustomLink";
 import "../styles/home.scss";
 import Nyheter from "../components/nyheter";
@@ -33,23 +34,40 @@ export const HomePageTemplate = ({ data, home, upcomingMeetup = null }) => {
 
       <section className="services">
         <div className="container">
+        <div className="services-rubrik row center-xs">
+          <h2 className="">Helt kostnadsfritt</h2>
+        </div>
           <li className="row center-xs">
-            <ul className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+           
+            <ul className="arrow-wrapper col-xs-4 col-sm-4 col-md-4 col-lg-4">
               {" "}
               <div className="services_circle">
                 {home.callToActions.firstCTA.heading}
-                <p>&#x2192;</p>
+                <img
+                className="arrow"
+                src={ArrowRight}
+                alt={"CarlFelix Assistansassist"}
+              />
               </div>
             </ul>
-            <ul className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <ul className="arrow-wrapper col-xs-4 col-sm-4 col-md-4 col-lg-4">
               <div className="services_circle">
                 {home.callToActions.secondCTA.heading}
+                <img
+                className="arrow"
+                src={ArrowRight}
+                alt={"CarlFelix Assistansassist"}
+              />
               </div>
             </ul>
             <ul className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
               <div className="services_circle">
-                {home.callToActions.thirdCTA.heading}
+                {home.callToActions.thirdCTA.heading} 
               </div>
+        
+
+
+
             </ul>
           </li>
         </div>

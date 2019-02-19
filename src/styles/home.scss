@@ -80,7 +80,16 @@
 }
 .services {
   margin-bottom: 175px;
-
+  
+  .services-rubrik{
+    h2{
+      margin-top: -75px;
+      margin-bottom: 75px;
+      font-size: 40px;
+      font-weight: 700px;
+      //color:#f3a83f;
+    }
+  }
   .services_circle {
     width: 40%;
     height: 0;
@@ -93,21 +102,67 @@
     background: #f3a83f;
     margin: 0 auto;
   }
+  .arrow-wrapper{
+    position: relative;
+    .arrow{
+      width: 20px;
+      position: absolute;
+      right: 0;
+      top: 40%;
+    }
+  }
 }
 .nyheter {
   margin-bottom: 175px;
   h1 {
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 25px;
+  .nyheter-bild{
+    background-size: contain;
+    }
   }
   .card-content2 {
-    font-size: 13px;
-    opacity: 0.7;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    position: relative;
+    text-align: left;
+    h2{
+      font-weight: 600;
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #000;
+    }
+    span{
+      display: block;
+      font-size: 13px;
+      opacity: 0.7;
+    }
+    p{
+      font-size: 18px;  
+      opacity: 0.7;
+    }
+  }
+}
+.nyhet{
+  position: relative;
+  .button{
+    background-color: #f3a83f; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
-    letter-spacing: 0.8px;
+    font-size: 16px;
+    border-radius: 14px;
+    position: absolute;
+    bottom: 10px;
+  }
+  .nyhet_wrapper{
+    padding-left: 0;
+  }
+  .nyheter-bild{
+    min-width: 500px;
+    max-width: 100%;  
   }
 }
 .ulf-citat {
@@ -127,6 +182,10 @@
     font-size: 24px;
     line-height: 2rem;
     margin-top: 25px;
+    h2{
+      color:#f3a83f; 
+      font-weight: 700;
+    }
   }
 }
 .upcomingMeetup {

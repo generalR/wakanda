@@ -1,5 +1,5 @@
 import React from "react";
-import { StaticQuery, graphql } from "gatsby";
+import { Link, StaticQuery, graphql } from "gatsby";
 
 const Nyheter = () => (
   <StaticQuery
@@ -13,6 +13,9 @@ const Nyheter = () => (
           edges {
             node {
               id
+              fields {
+                slug
+              }
               frontmatter {
                 title
                 date(formatString: "DD MMMM, YYYY")
@@ -29,21 +32,32 @@ const Nyheter = () => (
         {/**  <h2>{data.allMarkdownRemark.frontmatter.title}</h2>  */}
 
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <div className="row center-xs">
-              <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <div className="nyhet" key={node.id}>
+            <div className="row center-xs start-md">
+              <div className="nyhet_wrapper last-xs last-sm first-md first-lg col-xs-12 col-sm-12 col-md-4 col-lg-4">
                 <div className="card-content2">
                   <h2>
                     {node.frontmatter.title}
-                    <span>
-                      Nu funkar ju iaf componenten {node.frontmatter.date}
+                   {/**   <span>
+                      {node.frontmatter.date}
                     </span>
+                    */}
                   </h2>
                   <p>{node.excerpt}</p>
+
                 </div>
+                <Link className="" to={node.fields.slug}>
+                  <div className="button">
+                      Läs mer 
+                  </div>
+                  </Link>
               </div>
-              <div className="first-xs last-sm last-lg col-xs-12 col-sm-8 col-md-8 col-lg-8">
-                <img className="header-image" src={node.frontmatter.image} />
+              <div className="">
+                <div className="first-xs first-sm last-md last-lg col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                  <Link to={node.fields.slug}>
+                    <img className="nyheter-bild" src={node.frontmatter.image} />
+                    </Link>
+                  </div>
               </div>
             </div>
           </div>

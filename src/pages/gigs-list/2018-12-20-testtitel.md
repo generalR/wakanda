@@ -1,14 +1,18 @@
 ---
 templateKey: gigs-post
-title: testTitel
-date: 2018-12-20T19:59:29.436Z
+title: Januari uppgörelsen
+date: 2019-01-20
 description: test desctiption
 image: /img/television.png
 tags:
   - gagag
 ---
-body text
+Januari uppgörelsen mellan S + MP + C + L. Där kom partierna överens om att
+återupprätta personlig assistans inom LSS så att de som blivit av med den ska
+få den tillbaka genom att söka på nytt. Och att den som har rätt till personlig
+assistans ska få det.
 
-This is a beautiful iframe:
-
-<iframe src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+LSS är en rättighetslag men vid både nyansökan och omprövning är det så
+viktigt att anlita ett assistansbolag med skarp juridisk kompetens och kunskap
+om hur omfattande stöd och hjälp som behövs i vardagen för att livskvaliteten
+ska förbättras.
