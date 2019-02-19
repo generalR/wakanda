@@ -4,6 +4,8 @@ title: Wakanda JavaScript Developer Meetup
 mainImage:
   image: /img/teemu-paananen-376238-unsplash.jpg
   imageAlt: Wakanda JavaScript developer presenting at a meetup.
+  image2: /img/teemu-paananen-376238-unsplash.jpg
+  imageAlt2: Wakanda JavaScript developer presenting at a meetup.
 gallery:
   - image: /img/neonbrand-509131-unsplash.jpg
     imageAlt: Wakanda JavaScript developer presenting at a meetup.
@@ -13,7 +15,6 @@ gallery:
     imageAlt: Wakanda developers working together at a table.
 developerGroups: |-
   ## Other Wakanda Developer Groups
-
   * [React & React Native Meetup](https://www.google.com)
   * [Python Meetup](https://www.google.com)
   * [Google Developer Meetup](https://www.google.com)

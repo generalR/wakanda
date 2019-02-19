@@ -21,6 +21,9 @@ export const AboutPageTemplate = props => {
           <div className="about-imageWrapper">
             <img src={page.frontmatter.mainImage.image} alt={page.frontmatter.mainImage.imageAlt} />
           </div>
+          <div className="">
+            <img src={page.frontmatter.mainImage.image2} alt={page.frontmatter.mainImage.imageAlt2} />
+          </div>
         </section>
         <section className="section">
           {/* The page.html is actually markdown when viewing the page from the netlify CMS,
@@ -100,6 +103,8 @@ export const aboutPageQuery = graphql`
         mainImage {
           image
           imageAlt
+          image2
+          imageAlt2
         }
         gallery {
           image

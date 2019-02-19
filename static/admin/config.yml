@@ -106,7 +106,8 @@ collections:
                     widget: "list",
                     fields:
                       [
-                        { label: "Name", name: "name", widget: "string" },
+                        { label: "Year", name: "year", widget: "string" },
+                        { label: "Beskrivning", name: "beskrivning", widget: "string" },
                         { label: "Image", name: "image", widget: "image" },
                         { label: "Image Description", name: "imageAlt", widget: "string" },
                       ],
