@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import "./styles.scss";
-import HeadshotPlaceholder from "../../img/Lager.png";
+import HeadshotPlaceholder from "../../img/logo-big.png";
 
 class Navigation extends React.Component {
   /* componentDidMount() {
@@ -25,7 +25,6 @@ class Navigation extends React.Component {
             <Link to="/">
               <img
                 className="logo"
-                className="meetup-presenterImage"
                 src={HeadshotPlaceholder}
                 alt={"CarlFelix Assistansassist"}
               />

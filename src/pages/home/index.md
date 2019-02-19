@@ -23,7 +23,7 @@ callToActions:
 UlfImage:
   image: /img/ulf.jpg
   imageAlt: Assistansrådgivare
-UlfCitat: “Att förbättra livskvaliteten för människor med ett stort hjälpbehov är anledningen till att jag startade Carl Felix AssistansAssist”
+UlfCitat: Att förbättra livskvaliteten för människor med ett stort hjälpbehov är anledningen till att jag startade Carl Felix AssistansAssist
 NamnTillCitat: Ulf Helinder
 seo:
   browserTitle: JS Wakanda

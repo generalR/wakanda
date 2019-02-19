@@ -1,53 +1,30 @@
 import React from "react";
 import "./styles.scss";
+import HeadshotPlaceholder from "../../img/logo-big.png";
 
 export const FooterTemplate = ({ data }) => {
   const { logoImage, socialLinks } = data;
 
   return (
     <nav className="footer">
-      <div className="footer-container  container">
-        <div className="footer-top">
-          <div className="footer-about">
-            <h4 className="footer-aboutTitle">
+      <section className="services">
+        <div className="container">
+          <li className="row center-xs">
+            <ul className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
               <img
                 className="footer-aboutTitleImg"
-                src={logoImage.image}
+                src={HeadshotPlaceholder}
                 alt={logoImage.imageAlt}
               />
-            </h4>
-            <p className="footer-aboutDescription">{logoImage.tagline}</p>
-          </div>
-          {socialLinks.length > 0 && (
-            <ul className="footer-socialMenu">
-              {socialLinks.map(socialLink => (
-                <li key={socialLink.linkURL} className="footer-socialMenuItem">
-                  <a
-                    className="footer-socialLink"
-                    href={socialLink.linkURL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      className="footer-socialLinkIcon"
-                      src={socialLink.image}
-                      alt={socialLink.imageAlt}
-                    />
-                    {socialLink.label}
-                  </a>
-                </li>
-              ))}
             </ul>
-          )}
+            <ul className="kontakt col-xs-6 col-sm-6 col-md-6 col-lg-6">
+              <h1>Kontakt</h1>
+              <span className="">E: ulfhelinder@gmail.com</span> <br />
+              <span className="">T: +46 735747926</span>
+            </ul>
+          </li>
         </div>
-        <div className="footer-bottom">
-          <div className="footer-flag">
-            <span role="img" aria-label="Made in Canada">
-              🇨🇦
-            </span>
-          </div>
-        </div>
-      </div>
+      </section>
     </nav>
   );
 };

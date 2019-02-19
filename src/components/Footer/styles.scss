@@ -3,8 +3,6 @@
 
 .footer {
   background-color: #f9dda3;
-  @include medium-font;
-  color: $body-light;
   padding: 80px 20px;
 
   @include respond-to("small") {
@@ -44,7 +42,7 @@
   }
 
   &-aboutTitleImg {
-    max-height: 60px;
+    max-height: 125px;
     height: auto;
     margin-bottom: 10px;
   }
