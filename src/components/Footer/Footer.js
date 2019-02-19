@@ -9,7 +9,7 @@ export const FooterTemplate = ({ data }) => {
     <nav className="footer">
       <section className="services">
         <div className="container">
-          <li className="row center-xs">
+          <li className="row">
             <ul className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
               <img
                 className="footer-aboutTitleImg"
