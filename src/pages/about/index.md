@@ -1,11 +1,23 @@
 ---
 templateKey: about-page
-title: Wakanda JavaScript Developer Meetup
+title: Om Felix
 mainImage:
-  image: /img/teemu-paananen-376238-unsplash.jpg
-  imageAlt: Wakanda JavaScript developer presenting at a meetup.
-  image2: /img/teemu-paananen-376238-unsplash.jpg
+  image1: /img/ulfFelix.png
+  imageAlt1: Wakanda JavaScript developer presenting at a meetup.
+  year1: 1988
+  beskrivning1: September 1988 Felix Helinder- välskapt gossebarn, Karlstad BB, tio fingrar,tio tår.
+  image2: /img/felixCykel.png
   imageAlt2: Wakanda JavaScript developer presenting at a meetup.
+  year2: 1992
+  beskrivning2: September 1992, Felix nöjd med 4-årskontrollen hos läkaren u.a (utan anmärkning).
+  image3: /img/felixFlotte.png
+  imageAlt3: Wakanda JavaScript developer presenting at a meetup.
+  year3: 1998
+  beskrivning3: Desintegrativ autism och utvecklingstörning, ovanligt en till fyra av 115 till 120 tusen barn som föds per år.
+  image4: /img/felixGul.png
+  imageAlt4: Wakanda JavaScript developer presenting at a meetup.
+  year4: Idag
+  beskrivning4: Felix lever idag ett bra liv med rätt assistans utifrån sinda behov.
 gallery:
   - image: /img/neonbrand-509131-unsplash.jpg
     imageAlt: Wakanda JavaScript developer presenting at a meetup.

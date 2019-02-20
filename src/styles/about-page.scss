@@ -2,6 +2,16 @@
 @import "./mixins.scss";
 
 .about {
+  .om-felix-wrapper{
+  max-width: 960px;
+  margin: auto;
+  margin-top: 75px;
+  .om-fleix_title{
+    margin-bottom: 25px;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  }
   &-header {
     display: flex;
     flex-direction: column;

@@ -13,18 +13,53 @@ export const AboutPageTemplate = props => {
 
   return (
     <article className="about">
-      <div className="about-container  container">
-        <section className="about-header">
-          <div className="about-titleWrapper">
-            <h1 className="about-title">{page.frontmatter.title}</h1>
+      <div className="about-container container">
+        <section className="om-felix-wrapper ">
+        <h1 className="om-fleix_title">{page.frontmatter.title}</h1> 
+            <div className="row"> 
+                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                  <img src={page.frontmatter.mainImage.image1} alt={page.frontmatter.mainImage.imageAlt1} />
+                </div>
+                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                <h1 className="">{page.frontmatter.mainImage.year1}</h1> 
+                  <h1 className="">{page.frontmatter.mainImage.beskrivning1}</h1> 
+                </div>
+              </div>
+
+          <div className="row"> 
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+            <h1 className="">{page.frontmatter.mainImage.year2}</h1> 
+              <h1 className="">{page.frontmatter.mainImage.beskrivning2}</h1>
+            </div>
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+              <img src={page.frontmatter.mainImage.image2} alt={page.frontmatter.mainImage.imageAlt2} />
+            </div>
           </div>
-          <div className="about-imageWrapper">
-            <img src={page.frontmatter.mainImage.image} alt={page.frontmatter.mainImage.imageAlt} />
+
+          <div className="row"> 
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+            
+              <img src={page.frontmatter.mainImage.image3} alt={page.frontmatter.mainImage.imageAlt3} />
+            </div>
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+            <h1 className="">{page.frontmatter.mainImage.year3}</h1> 
+              <h1 className="">{page.frontmatter.mainImage.beskrivning3}</h1>
+            </div>
           </div>
-          <div className="">
-            <img src={page.frontmatter.mainImage.image2} alt={page.frontmatter.mainImage.imageAlt2} />
+
+          <div className="row"> 
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+            <h1 className="">{page.frontmatter.mainImage.year4}</h1> 
+              <h1 className="">{page.frontmatter.mainImage.beskrivning4}</h1>
+            </div>
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+              <img src={page.frontmatter.mainImage.image4} alt={page.frontmatter.mainImage.imageAlt4} />
+            </div>
           </div>
+
+
         </section>
+
         <section className="section">
           {/* The page.html is actually markdown when viewing the page from the netlify CMS,
               so we must use the ReactMarkdown component to parse the mardown in that case  */}
@@ -101,10 +136,22 @@ export const aboutPageQuery = graphql`
       frontmatter {
         title
         mainImage {
-          image
-          imageAlt
+          image1
+          imageAlt1
+          year1
+          beskrivning1
           image2
           imageAlt2
+          year2
+          beskrivning2
+          image3
+          imageAlt3
+          year3
+          beskrivning3
+          image4
+          imageAlt4
+          year4
+          beskrivning4
         }
         gallery {
           image
