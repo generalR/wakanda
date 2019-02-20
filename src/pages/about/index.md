@@ -19,7 +19,7 @@ mainImage:
   year4: Idag
   beskrivning4: Felix lever idag ett bra liv med rätt assistans utifrån sinda behov.
 seo:
-  browserTitle: About | JavaScript Wakanda
+  browserTitle: Om Felix
   description: >-
     JavaScript Wakanda is a meetup group that holds monthly meetups where
     JavaScript developers get together for presentations and to meet others in

@@ -43,11 +43,11 @@ class Navigation extends React.Component {
                   <Link className="nav-item" to={"/"}>
                     Hem
                   </Link>
-                  <Link className="nav-item" to={"/lab"}>
+                  <Link className="nav-item" to={"/about"}>
                     Felix
                   </Link>
                   <Link className="nav-item" to={"/cv"}>
-                    Nyheter
+                    
                   </Link>
                 </div>
               </div>
