@@ -58,7 +58,7 @@ class Navigation extends React.Component {
             <div className="mail-info col-xs">
               <span className="mail_adress">E: ulfhelinder@gmail.com</span>{" "}
               <br />
-              <span className="mail_adress">T: +46 735747926</span>
+              <span className="mail_adress">T: +46 706546250</span>
             </div>
           </div>
         </div>
