@@ -18,29 +18,6 @@ mainImage:
   imageAlt4: Wakanda JavaScript developer presenting at a meetup.
   year4: Idag
   beskrivning4: Felix lever idag ett bra liv med rätt assistans utifrån sinda behov.
-gallery:
-  - image: /img/neonbrand-509131-unsplash.jpg
-    imageAlt: Wakanda JavaScript developer presenting at a meetup.
-  - image: /img/jakob-dalbjorn-730178-unsplash.jpg
-    imageAlt: Wakanda JavaScript developer presenting at a meetup.
-  - image: /img/annie-spratt-608001-unsplash.jpg
-    imageAlt: Wakanda developers working together at a table.
-developerGroups: |-
-  ## Other Wakanda Developer Groups
-  * [React & React Native Meetup](https://www.google.com)
-  * [Python Meetup](https://www.google.com)
-  * [Google Developer Meetup](https://www.google.com)
-  * [Vue.js Meetup](https://www.google.com)
-  * [Ruby Meetup](https://www.google.com)
-organizers:
-  title: Group Organizers
-  gallery:
-    - image: /img/organizer-1.jpg
-      imageAlt: Tom Cruise
-      name: Tom Cruise
-    - image: /img/organizer-2.jpg
-      imageAlt: Tom Hanks
-      name: Tom Hanks
 seo:
   browserTitle: About | JavaScript Wakanda
   description: >-
