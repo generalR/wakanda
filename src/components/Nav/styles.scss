@@ -44,7 +44,8 @@ header {
 }
 */
 .logo {
-  height: 75px;
+  max-height: 75px;
+  width: auto;
 }
 #main_nav {
   text-align: left;
