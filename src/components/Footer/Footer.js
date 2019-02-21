@@ -9,15 +9,15 @@ export const FooterTemplate = ({ data }) => {
     <nav className="footer">
       <section className="services">
         <div className="container">
-          <li className="row">
-            <ul className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+          <li className="row center-xs">
+            <ul className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
               <img
                 className="footer-aboutTitleImg"
                 src={HeadshotPlaceholder}
                 alt={logoImage.imageAlt}
               />
             </ul>
-            <ul className="kontakt col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <ul className="kontakt col-xs-12 col-sm-12 col-md-6 col-lg-6">
               <h1>Kontakt</h1>
               <span className="">E: ulfhelinder@gmail.com</span> <br />
               <span className="">T: +46 706546250</span>
