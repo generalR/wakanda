@@ -117,6 +117,7 @@
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 25px;
+    margin-left: -14px;
   .nyheter-bild{
     background-size: contain;
     }
@@ -142,9 +143,14 @@
   }
 }
 .nyhet{
-  position: relative;
+  .nyhet_wrapper{
+    padding-left: 0;
+    position: relative;
+  .button-wrapper{
+    position: absolute;
+    bottom: 0px;
   .button{
-    background-color: #f3a83f; /* Green */
+    background-color: #f3a83f;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -153,17 +159,19 @@
     display: inline-block;
     font-size: 16px;
     border-radius: 14px;
-    position: absolute;
-    bottom: 10px;
-  }
-  .nyhet_wrapper{
-    padding-left: 0;
-  }
-  .nyheter-bild{
-    min-width: 500px;
-    max-width: 100%;  
+        }
+      }
+    }
+    .nyheter-bild-col{
+      padding-left: 0;
+      margin-left: 0;
+    }
+    .nyheter-bild{
+      min-width: 500px;
+      max-width: 100%;  
   }
 }
+
 .ulf-citat {
   margin-bottom: 175px;
   .hr-element-top {
@@ -188,7 +196,7 @@
   }
 }
 
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 992px) {
   .header-title {
     .header-title__pos-absolute {
       bottom: 45px;
@@ -233,7 +241,62 @@
         left: 49%;
         transform: rotate(90deg);
       }
-   
+    }
+  }
+  .nyheter {
+    margin-bottom: 175px;
+    h1 {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 25px;
+    .nyheter-bild{
+      background-size: contain;
+      }
+    }
+    .card-content2 {
+      position: relative;
+      text-align: left;
+      h2{
+        font-weight: 600;
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #000;
+      }
+      span{
+        display: block;
+        font-size: 13px;
+        opacity: 0.7;
+      }
+      p{
+        font-size: 18px;  
+        opacity: 0.7;
+        max-width: 500px;
+      }
+    }
+  }
+  .nyhet{
+    .nyhet_wrapper{
+      padding-left: 0;
+      position: relative;
+    .button-wrapper{
+      position: absolute;
+      bottom: -120px;
+    .button{
+      background-color: #f3a83f;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 14px;
+          }
+        }
+      }
+    .nyheter-bild{
+      min-width: 250px;
+      max-width: 100%;  
     }
   }
 }
@@ -296,16 +359,39 @@
       font-weight: 600;
     }
     .arrow-wrapper{
-
       .arrow{
- 
         width: 20px;
         position: absolute;
         top: 120%;
         left: 48%;
         transform: rotate(90deg);
       }
-   
+    }
+  }
+  .nyhet{
+    .nyhet_wrapper{
+      padding-left: 0;
+      position: relative;
+    .button-wrapper{
+    .button{
+      background-color: #f3a83f;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 14px;
+          }
+        }
+      }
+      .nyheter-bild-col{
+        padding-left: 0;
+        margin-left: 0;
+      }
+      .nyheter-bild{
+        max-width: 100%;  
     }
   }
 }

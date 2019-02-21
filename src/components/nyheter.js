@@ -30,10 +30,14 @@ const Nyheter = () => (
     render={data => (
       <section className="container">
         {/**  <h2>{data.allMarkdownRemark.frontmatter.title}</h2>  */}
-
+        
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div className="nyhet" key={node.id}>
-            <div className="row center-xs start-md">
+          <div>
+            <h1>Nyheter</h1>
+          </div>
+            <div className="row start-sm">
+            
               <div className="nyhet_wrapper last-xs last-sm first-md first-lg col-xs-12 col-sm-12 col-md-4 col-lg-4">
                 <div className="card-content2">
                   <h2>
@@ -46,14 +50,14 @@ const Nyheter = () => (
                   <p>{node.excerpt}</p>
 
                 </div>
-                <Link className="" to={node.fields.slug}>
+                <Link className="button-wrapper" to={node.fields.slug}>
                   <div className="button">
                       Läs mer 
                   </div>
                   </Link>
               </div>
               <div className="">
-                <div className="first-xs first-sm last-md last-lg col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <div className="nyheter-bild-col first-xs first-sm last-md last-lg col-xs-12 col-sm-12 col-md-8 col-lg-8">
                   <Link to={node.fields.slug}>
                     <img className="nyheter-bild" src={node.frontmatter.image} />
                     </Link>

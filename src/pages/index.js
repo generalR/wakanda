@@ -72,10 +72,9 @@ export const HomePageTemplate = ({ data, home, upcomingMeetup = null }) => {
           </li>
         </div>
       </section>
-
       <section className="nyheter">
         <div className="container">
-          <h1>Nyheter</h1>
+          
           <Nyheter />
         </div>
       </section>
