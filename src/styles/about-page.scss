@@ -2,27 +2,28 @@
 @import "./mixins.scss";
 
 .about {
-  .om-felix-wrapper{
-  max-width: 960px;
-  margin: auto;
-  margin-top: 75px;
-  .om-fleix_title{
-    margin-bottom: 40px;
-    font-size: 40px;
-    font-weight: 700;
-  }
-  .om-felix-wrapper_year{
-    margin-bottom: 15px;
-    font-size: 20px;
-    font-weight: 700;
-    color: #f3a83f;
-  }
-  .om-felix-wrapper_row{
-    margin-bottom: 80px;
-  }
-  .om-felix-wrapper_beskrivning{
-    max-width: 440px;
-  }
+  .om-felix-wrapper {
+    max-width: 960px;
+    margin: auto;
+    margin-top: 75px;
+    .om-fleix_title {
+      margin-bottom: 40px;
+      font-size: 40px;
+      font-weight: 700;
+    }
+    .om-felix-wrapper_year {
+      margin-bottom: 15px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #f3a83f;
+    }
+    .om-felix-wrapper_row {
+      margin-bottom: 80px;
+      text-align: left;
+    }
+    .om-felix-wrapper_beskrivning {
+      max-width: 440px;
+    }
   }
   &-header {
     display: flex;

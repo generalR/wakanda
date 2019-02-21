@@ -15,45 +15,72 @@ export const AboutPageTemplate = props => {
     <article className="about">
       <div className="about-container container">
         <section className="om-felix-wrapper ">
-        <h1 className="om-fleix_title">{page.frontmatter.title}</h1> 
-            <div className="om-felix-wrapper_row row"> 
-                <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                  <img src={page.frontmatter.mainImage.image1} alt={page.frontmatter.mainImage.imageAlt1} />
-                </div>
-                <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <h1 className="om-felix-wrapper_year">{page.frontmatter.mainImage.year1}</h1> 
-                  <p className="om-felix-wrapper_beskrivning">{page.frontmatter.mainImage.beskrivning1}</p> 
-                </div>
-              </div>
-
-          <div className="om-felix-wrapper_row row"> 
+          <h1 className="om-fleix_title">{page.frontmatter.title}</h1>
+          <div className="om-felix-wrapper_row row center-xs">
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <h1 className="om-felix-wrapper_year">{page.frontmatter.mainImage.year2}</h1> 
-            <p className="om-felix-wrapper_beskrivning">{page.frontmatter.mainImage.beskrivning2}</p> 
+              <img
+                src={page.frontmatter.mainImage.image1}
+                alt={page.frontmatter.mainImage.imageAlt1}
+              />
             </div>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-              <img src={page.frontmatter.mainImage.image2} alt={page.frontmatter.mainImage.imageAlt2} />
+              <h1 className="om-felix-wrapper_year">
+                {page.frontmatter.mainImage.year1}
+              </h1>
+              <p className="om-felix-wrapper_beskrivning">
+                {page.frontmatter.mainImage.beskrivning1}
+              </p>
             </div>
           </div>
 
-          <div className="om-felix-wrapper_row row"> 
-            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            
-              <img src={page.frontmatter.mainImage.image3} alt={page.frontmatter.mainImage.imageAlt3} />
+          <div className="om-felix-wrapper_row row">
+            <div className="last-xs last-sm first-md first-lg col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <h1 className="om-felix-wrapper_year">
+                {page.frontmatter.mainImage.year2}
+              </h1>
+              <p className="om-felix-wrapper_beskrivning">
+                {page.frontmatter.mainImage.beskrivning2}
+              </p>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <h1 className="om-felix-wrapper_year">{page.frontmatter.mainImage.year3}</h1> 
-            <p className="om-felix-wrapper_beskrivning">{page.frontmatter.mainImage.beskrivning3}</p> 
+              <img
+                src={page.frontmatter.mainImage.image2}
+                alt={page.frontmatter.mainImage.imageAlt2}
+              />
             </div>
           </div>
 
-          <div className="om-felix-wrapper_row row"> 
+          <div className="om-felix-wrapper_row row">
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <h1 className="om-felix-wrapper_year">{page.frontmatter.mainImage.year4}</h1> 
-            <p className="om-felix-wrapper_beskrivning">{page.frontmatter.mainImage.beskrivning4}</p> 
+              <img
+                src={page.frontmatter.mainImage.image3}
+                alt={page.frontmatter.mainImage.imageAlt3}
+              />
             </div>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-              <img src={page.frontmatter.mainImage.image4} alt={page.frontmatter.mainImage.imageAlt4} />
+              <h1 className="om-felix-wrapper_year">
+                {page.frontmatter.mainImage.year3}
+              </h1>
+              <p className="om-felix-wrapper_beskrivning">
+                {page.frontmatter.mainImage.beskrivning3}
+              </p>
+            </div>
+          </div>
+
+          <div className="om-felix-wrapper_row row">
+            <div className="last-xs last-sm first-md first-lg col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <h1 className="om-felix-wrapper_year">
+                {page.frontmatter.mainImage.year4}
+              </h1>
+              <p className="om-felix-wrapper_beskrivning">
+                {page.frontmatter.mainImage.beskrivning4}
+              </p>
+            </div>
+            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <img
+                src={page.frontmatter.mainImage.image4}
+                alt={page.frontmatter.mainImage.imageAlt4}
+              />
             </div>
           </div>
         </section>
@@ -66,8 +93,8 @@ const AboutPage = ({ data }) => {
   const { markdownRemark: page, footerData, navbarData } = data;
   const {
     frontmatter: {
-      seo: { title: seoTitle, description: seoDescription, browserTitle },
-    },
+      seo: { title: seoTitle, description: seoDescription, browserTitle }
+    }
   } = page;
 
   return (
@@ -83,7 +110,7 @@ const AboutPage = ({ data }) => {
 };
 
 AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired
 };
 
 export default AboutPage;
