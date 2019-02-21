@@ -26,20 +26,20 @@ export const HomePageTemplate = ({ data, home, upcomingMeetup = null }) => {
               />
             )}
           </div>
-          <h3 className="header-title">
-            <span className="header-title__pos-absolute"> {home.title} </span>
-          </h3>
+          <div className="header-title">
+            <h1 className="header-title__pos-absolute"> {home.title} </h1>
+          </div>
         </div>
       </section>
 
       <section className="services">
         <div className="container">
         <div className="services-rubrik row center-xs">
-          <h2 className="">Helt kostnadsfritt</h2>
+          <h2 className="services__title">Helt kostnadsfritt</h2>
         </div>
           <li className="row center-xs">
            
-            <ul className="arrow-wrapper col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <ul className="arrow-wrapper col-xs-12 col-sm-12 col-md-4 col-lg-4">
               {" "}
               <div className="services_circle">
                 {home.callToActions.firstCTA.heading}
@@ -50,7 +50,7 @@ export const HomePageTemplate = ({ data, home, upcomingMeetup = null }) => {
               />
               </div>
             </ul>
-            <ul className="arrow-wrapper col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <ul className="arrow-wrapper col-xs-12 col-sm-12 col-md-4 col-lg-4">
               <div className="services_circle">
                 {home.callToActions.secondCTA.heading}
                 <img
@@ -60,7 +60,7 @@ export const HomePageTemplate = ({ data, home, upcomingMeetup = null }) => {
               />
               </div>
             </ul>
-            <ul className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <ul className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
               <div className="services_circle">
                 {home.callToActions.thirdCTA.heading} 
               </div>
