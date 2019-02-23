@@ -1,4 +1,19 @@
 exports.onRouteUpdate = () => {
+  let $
+  if (typeof window !== `undefined`) {
+    $ = require('jquery')
+  } 
+
+  $(document).ready(function() {
+    //console.log(toggle + ".toggle hämtad")
+    //let toggle = document.getElementsByClassName('toggle')
+    //toggle.addEventListener('click', toggleMenu)
+    
+    $(".toggle").click(function() {
+      console.log(".toggle klickad JQUERY")
+      $('.mobile-nav').toggleClass('.active')
+    })
+  })
   /*
   require('./src/styles/global.scss')
   require('./src/styles/normalize.css') */
@@ -6,6 +21,16 @@ exports.onRouteUpdate = () => {
   // require('./src/styles/bootstrap.min.css')
 
   require('./src/styles/flexboxgrid.css')
+
+  //let toggle = document.getElementsByClassName('toggle')
+  const toggle = document.querySelector('.toggle')
+  console.log(toggle)
+  toggle.addEventListener('click', toggleMenu)
+
+  function toggleMenu() {
+    $('.mobile-nav').toggleClass('active')
+    console.log("i toggleMenu")
+  }
 }
   /* skulle ev. kunna lägga jquery koden här för att på varje onRouteUpdate
   köra koden. Alt. lägga den i layout för att på såvis få in den i varje layout.
@@ -53,16 +78,8 @@ exports.onRouteUpdate = () => {
     }
   }*/
 
-  let $
-  if (typeof window !== `undefined`) {
-    $ = require('jquery')
-  }
+ 
 
-  $(document).ready(function() {
-    $('.toggle').click(function() {
-      $('.mobile-nav').toggleClass('active')
-    })
-  })
-
+  
 
 //exports.onClientEntry = () => {}

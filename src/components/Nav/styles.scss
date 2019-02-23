@@ -74,7 +74,7 @@ header {
   margin-left: 20px;
   line-height: 25px;
   margin-top: 25px;
-  font-size: 24px;
+  font-size: 22px;
 }
 #main_nav a:first-child {
   margin-left: 0px;
@@ -83,9 +83,12 @@ header {
 .mail-adress-mobile {
   display: none;
 }
+.mobile-nav {
+  margin: 0 auto;
+}
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (max-width: 600px) {
     .post article .post_content {
@@ -106,12 +109,24 @@ header {
     }
   }
 
-  @media only screen and (max-width: 1400px) {
     /* Medium devices (landscape tablets, 768px and up) */
     @media only screen and (max-width: 768px) {
-      .mail-adress-wrapper {
-        margin-top: 30vh;
+      header {
+        &.container {
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
       }
+      .logo{
+        max-height: 55px;
+      }
+      .mail-info{
+      .mail_adress {
+        font-size: 22px;
+        display: none;
+
+      }
+    }
       .mail-adress-mobile {
         display: block;
         font-size: 18px;
@@ -168,10 +183,6 @@ header {
         overflow: auto;
         background-color: #fff;
       }
-
-      .mail_adress {
-        display: none;
-      }
       #main_nav {
         text-align: left;
         background-color: fff;
@@ -181,8 +192,8 @@ header {
       .toggle {
         z-index: 2;
         position: absolute;
-        left: 5%;
-        top: 5%;
+        right: 5%;
+        top: 32px;
         cursor: pointer;
         overflow: hidden;
 
@@ -216,9 +227,15 @@ header {
         }
       }
     }
-
-    /* Large devices (laptops/desktops, 992px and up) */
-    @media only screen and (max-width: 992px) {
+  
+    @media only screen and (max-width: 1038px) {
+      .mail-info{
+      .mail_adress {
+        font-size: 18px;
+        margin-left: 0;
+      }
+    }
+  }
       /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
       @media screen and (max-height: 450px) {
         .overlay a {
@@ -230,6 +247,5 @@ header {
           right: 35px;
         }
       }
-    }
-  }
-}
+    
+  

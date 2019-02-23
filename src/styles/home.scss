@@ -196,6 +196,28 @@
   }
 }
 
+/*
+Inne i en Nyhet
+*/
+.artikel{
+  .artikel-title{
+    text-align: left;
+    width: 650px;
+    margin: 0 auto;
+  }
+  .artikel-paragraf{
+      text-align: left;
+      width: 650px;
+      margin: 0 auto;
+      p{
+        margin-bottom: 20px;
+      }
+    }
+}
+
+
+
+
 @media only screen and (max-width: 992px) {
   .header-title {
     .header-title__pos-absolute {

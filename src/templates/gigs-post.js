@@ -10,6 +10,7 @@ export const GigPostTemplate = ({
   content,
   contentComponent,
   description,
+  image,
   tags,
   title,
   helmet
@@ -20,13 +21,17 @@ export const GigPostTemplate = ({
     <section className="section">
       {helmet || ""}
       <div className="container content">
-        <div className="row center-xs">
-          <div className="col-xs-12">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+        <div className="artikel row">
+          <div className="artikel-col col-xs-12">
+            <h1 className="artikel-title">
               {title}
             </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
+            <img
+                className=""
+                src={image}
+                alt=""
+              />
+            <PostContent className="artikel-paragraf" content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
@@ -63,6 +68,7 @@ const GigPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
+        image={post.frontmatter.image}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -96,6 +102,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        image
         tags
       }
     }

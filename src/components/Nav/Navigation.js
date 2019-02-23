@@ -46,9 +46,6 @@ class Navigation extends React.Component {
                   <Link className="nav-item" to={"/about"}>
                     Felix
                   </Link>
-                  <Link className="nav-item" to={"/cv"}>
-                    
-                  </Link>
                 </div>
               </div>
             </nav>
