@@ -20,7 +20,7 @@ export const FooterTemplate = ({ data }) => {
             <ul className="kontakt col-xs-12 col-sm-12 col-md-6 col-lg-6">
               <h1>Kontakt</h1>
               <span className="">E: ulfhelinder@gmail.com</span> <br />
-              <span className="">T: +46 706546250</span>
+              <span className="">T: +46 706456250</span>
             </ul>
           </li>
         </div>
