@@ -17,7 +17,7 @@ mainImage:
   image4: /img/felixGul.png
   imageAlt4: Wakanda JavaScript developer presenting at a meetup.
   year4: Idag
-  beskrivning4: Felix lever idag ett bra liv med rätt assistans utifrån sinda behov.
+  beskrivning4: Felix lever idag ett bra liv med rätt assistans utifrån sina behov.
 seo:
   browserTitle: Om Felix
   description: >-

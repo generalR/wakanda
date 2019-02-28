@@ -20,17 +20,19 @@ export const GigPostTemplate = ({
   return (
     <section className="section">
       {helmet || ""}
-      <div className="container content">
+      <div className="container">
         <div className="artikel row">
           <div className="artikel-col col-xs-12">
-            <h1 className="artikel-title">
-              {title}
-            </h1>
+          <div className="artikel-content">
             <img
-                className=""
+                className="artikel-image"
                 src={image}
                 alt=""
               />
+                       
+            <h1 className="artikel-title">
+              {title}
+            </h1>
             <PostContent className="artikel-paragraf" content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -45,6 +47,7 @@ export const GigPostTemplate = ({
               </div>
             ) : null}
           </div>
+        </div>
         </div>
       </div>
     </section>
