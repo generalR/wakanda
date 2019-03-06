@@ -5,7 +5,7 @@ mainImage:
   image1: /img/ulfFelix.png
   imageAlt1: Wakanda JavaScript developer presenting at a meetup.
   year1: 1988
-  beskrivning1: September 1988 Felix Helinder- välskapt gossebarn, Karlstad BB, tio fingrar,tio tår.
+  beskrivning1: September 1988, Felix föds helt frisk och utvecklas normalt de första levnadsåren.
   image2: /img/felixCykel.png
   imageAlt2: Wakanda JavaScript developer presenting at a meetup.
   year2: 1992

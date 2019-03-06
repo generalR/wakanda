@@ -34,7 +34,7 @@ export const GigPostTemplate = ({
               {title}
             </h1>
             <PostContent className="artikel-paragraf" content={content} />
-            {tags && tags.length ? (
+          {/**  {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
                 <ul className="taglist">
@@ -46,6 +46,7 @@ export const GigPostTemplate = ({
                 </ul>
               </div>
             ) : null}
+             */}
           </div>
         </div>
         </div>
