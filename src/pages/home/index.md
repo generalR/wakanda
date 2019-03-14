@@ -26,9 +26,8 @@ UlfImage:
 UlfCitat: Att förbättra livskvaliteten för människor med ett stort hjälpbehov är anledningen till att jag startade Carl Felix AssistansAssist
 NamnTillCitat: Ulf Helinder
 seo:
-  browserTitle: JS Wakanda
+  browserTitle: Ulf Helinder
   description: >-
-    JavaScript meetup group in Wakanda where JavaScript developers get together
-    for presentations and to meet others in the community.
-  title: JavaScript Wakanda
+    Ulf Helinder ger goda råd inom den personlig assistansen. 
+  title: Ulf Helinder
 ---

@@ -3,28 +3,27 @@ templateKey: about-page
 title: Om Felix
 mainImage:
   image1: /img/ulfFelix.png
-  imageAlt1: Wakanda JavaScript developer presenting at a meetup.
+  imageAlt1: Felix föds helt frisk 
   year1: 1988
   beskrivning1: September 1988, Felix föds helt frisk och utvecklas normalt de första levnadsåren.
   image2: /img/felixCykel.png
-  imageAlt2: Wakanda JavaScript developer presenting at a meetup.
+  imageAlt2: Felix nöjd på cykel.
   year2: 1992
-  beskrivning2: September 1992, Felix nöjd med 4-årskontrollen hos läkaren u.a (utan anmärkning).
+  beskrivning2: September 1992, Felix nöjd med 4-årskontrollen hos läkaren. Helt utan anmärkning.
   image3: /img/felixFlotte.png
-  imageAlt3: Wakanda JavaScript developer presenting at a meetup.
+  imageAlt3: Felix på en flotte med familjen.
   year3: 1998
   beskrivning3: Desintegrativ autism och utvecklingstörning, ovanligt en till fyra av 115 till 120 tusen barn som föds per år.
   image4: /img/felixGul.png
-  imageAlt4: Wakanda JavaScript developer presenting at a meetup.
+  imageAlt4: Felix idag.
   year4: Idag
   beskrivning4: Felix lever idag ett bra liv med rätt assistans utifrån sina behov.
 seo:
   browserTitle: Om Felix
   description: >-
-    JavaScript Wakanda is a meetup group that holds monthly meetups where
-    JavaScript developers get together for presentations and to meet others in
-    the community.
-  title: About | JS Wakanda
+    Felix Helinder har desintegrativ autism och utvecklingstörning vilket är ovanligt då endast en till fyra av 115 till 120 tusen barn föds med detta per år. 
+    
+  title: Felix | Historia
 ---
 ## Sharing Ideas and Meeting Others
 
